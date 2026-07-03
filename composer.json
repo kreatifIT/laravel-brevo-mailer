@@ -1,0 +1,64 @@
+{
+    "name": "kreatif/laravel-brevo-mailer",
+    "version": "1.1.0",
+    "description": "Symfony Mailer transport for the Brevo transactional email API, for use with Laravel's Mail facade.",
+    "keywords": [
+        "kreatif",
+        "laravel",
+        "brevo",
+        "sendinblue",
+        "mailer",
+        "transactional-email"
+    ],
+    "homepage": "https://github.com/kreatifIT/laravel-brevo-mailer",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Kreatif Team",
+            "email": "info@kreatif.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "spatie/laravel-package-tools": "^1.9",
+        "illuminate/contracts": "^11.0||^12.0||^13.0",
+        "symfony/mailer": "^6.4||^7.0",
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.14",
+        "orchestra/testbench": "^10.0.0||^9.0.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Kreatif\\BrevoMailer\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kreatif\\BrevoMailer\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "format": "vendor/bin/pint"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kreatif\\BrevoMailer\\BrevoMailerServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
